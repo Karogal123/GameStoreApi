@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using GameStore.Auth;
+using GameStore.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +21,8 @@ namespace GameStore.Installers
             var jwtSettings = new JwtSettings();
             configration.Bind(nameof(jwtSettings), jwtSettings);
             services.AddSingleton(jwtSettings);
+
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddMvc().AddFluentValidation(opt => opt.RegisterValidatorsFromAssemblyContaining<Startup>());
 

@@ -1,4 +1,5 @@
 ﻿using GameStore.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,9 @@ namespace GameStore.Installers
         public void InstallServices(IServiceCollection services, IConfiguration configration)
         {
             services.AddDbContext<GamesContext>(opt => opt.UseSqlServer(configration.GetConnectionString("GameConnection")));
+            //services.AddDefaultIdentity<IdentityUser>();
+            services.AddIdentityCore<IdentityUser>()
+                .AddEntityFrameworkStores<GamesContext>();
             services.AddOptions();
             
 

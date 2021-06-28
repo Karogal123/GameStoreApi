@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GameStore.Profiles
+namespace GameStore.MapperProfiles
 {
     public class AuthorProfile : Profile
     {

@@ -20,8 +20,7 @@ namespace GameStore.Validators
                 .MaximumLength(20);
             RuleFor(x => x.PhoneNumber)
                 .NotEmpty()
-                .LessThan(1000000000)
-                .NotEqual(000000000);    
+                .Length(9);
         }
     }
 }

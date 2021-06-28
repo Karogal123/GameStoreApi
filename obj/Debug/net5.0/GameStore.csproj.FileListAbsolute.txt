@@ -70,3 +70,12 @@ D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.
 D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\GameStore.StaticWebAssets.xml
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Program Files (x86)\C# Programy\Cwiczenia\GameStore\GameStore\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

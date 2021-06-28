@@ -42,7 +42,6 @@ namespace GameStore.Controllers
             return Ok(_mapper.Map<IEnumerable<WarehoueReadDto>>(whs));
         }
 
-        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteWarehouse(int id)
         {
@@ -54,8 +53,6 @@ namespace GameStore.Controllers
             await _repository.DeleteWarehouseAsync(wh);
             return Ok();
         }
-
-        [Authorize]
         [HttpPost]
         public async Task<ActionResult> CreateWarehouse(WarehouseDto warehouseCreatedDto)
         {
@@ -65,7 +62,6 @@ namespace GameStore.Controllers
             return CreatedAtAction(nameof(GetWarehouseById), new { Id = warehouseReadDto.Id }, warehouseReadDto);
         }
 
-        [Authorize]
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateWarehouse(WarehouseDto warehouseUpdateDto, int id)
         {
