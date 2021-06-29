@@ -23,9 +23,30 @@ namespace GameStore.Controllers
         }
 
         [HttpPost]
+        [Route("Register")]
         public async Task<IActionResult> Register(User user)
         {
             var authResponse = await _repository.RegisterAsync(user);
+
+            if (!authResponse.Success)
+            {
+                return BadRequest(new AuthFailedResponse
+                {
+                    Errors = authResponse.Errors
+                });
+            }
+
+            return Ok(new AuthSuccessResponse
+            {
+                Token = authResponse.Token
+            });
+        }
+
+        [HttpPost]
+        [Route("Login")]
+        public async Task<IActionResult> Login(User user)
+        {
+            var authResponse = await _repository.LoginAsync(user);
 
             if (!authResponse.Success)
             {

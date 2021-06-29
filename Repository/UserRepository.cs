@@ -51,6 +51,36 @@ namespace GameStore.Repository
                 };
             }
 
+            return GenerateAuthenticationResult(newUser);
+        }
+
+        public async Task<AuthenticationResult> LoginAsync(User user)
+        {
+            var existingUser = await _userManager.FindByEmailAsync(user.Email);
+
+            if (existingUser is null)
+            {
+                return new AuthenticationResult
+                {
+                    Errors = new[] { "User does not exist" }
+                };
+            }
+
+            var userHasValidPassword = await _userManager.CheckPasswordAsync(existingUser, user.Password);
+
+            if (!userHasValidPassword)
+            {
+                return new AuthenticationResult
+                {
+                    Errors = new[] { "User/password combination is wrong" }
+                };
+            }
+
+            return GenerateAuthenticationResult(existingUser);
+        }
+
+        private AuthenticationResult GenerateAuthenticationResult(IdentityUser newUser)
+        {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
